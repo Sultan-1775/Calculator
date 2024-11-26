@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Это важно, чтобы padding не нарушал ширину элементов */
+}
+
+.calculator {
+    width: 320px;
+    background-color: #34495e; /* Более темный фон для калькулятора */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Добавим более выразительную тень */
+    box-sizing: border-box;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    color: #34495e;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #16a085; /* Изменим цвет кнопок */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #1abc9c; /* Цвет при наведении */
+}
+
+button:active {
+    transform: scale(0.95); /* Эффект сжатия кнопки при нажатии */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Стили для кнопок операций */
+button.operation {
+    background-color: #e74c3c; /* Красный цвет для операций */
+}
+
+button.operation:hover {
+    background-color: #c0392b;
+}
+
+button.equal {
+    background-color: #2980b9; /* Синий цвет для кнопки "=" */
+    grid-column: span 2; /* Сделаем кнопку "=" шире */
+}
+
+button.equal:hover {
+    background-color: #3498db;
+}
